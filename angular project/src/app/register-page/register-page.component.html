@@ -1,0 +1,53 @@
+<div [formGroup]="registerForm" class="container">
+  <div class="heading">Register</div>
+  <form>
+    <div class="card-details">
+      <div class="card-box">
+        <span class="details">Full Name*</span>
+        <input maxlength="20" formControlName="fullName" type="text" placeholder="Enter your name">
+      </div>
+      <div class="card-box">
+        <span class="details">Username*</span>
+        <input maxlength="16" minlength="4" formControlName="username" type="text" placeholder="Enter your Username">
+      </div>
+      <div class="card-box">
+        <span class="details">Email*</span>
+        <input formControlName="email" type="email" placeholder="Enter your email">
+      </div>
+      <div class="card-box">
+        <span class="details">Phone Number</span>
+        <input required maxlength="10" formControlName="phoneNumber" type="phone" placeholder="Phone number">
+      </div>
+      <div class="card-box">
+        <span class="details">Password*</span>
+        <input formControlName="password" type="password" placeholder="Enter your password">
+      </div>
+      <div class="card-box">
+        <span class="details">Confirm password*</span>
+        <input formControlName="confirmPassword" type="password" placeholder="Confirm your password">
+      </div>
+    </div>
+    <div class="circal-form">
+      <span class="circal-title">Gender*</span>
+      <div class="category">
+        <input type="radio" value="male" formControlName="gender">Male
+        <input type="radio" value="female" formControlName="gender">Female
+        <input value="other" type="radio" formControlName="gender">Other
+      </div>
+
+    </div>
+    <div class="circal-form">
+      <span class="circal-title">Role*</span>
+      <div class="category">
+        <input type="radio" value="buyer" formControlName="role">Buyer
+        <input value="seller" type="radio" formControlName="role">Seller
+
+      </div>
+
+    </div>
+
+    <div class="button">
+      <input (click)="createUser()" type="button" value="Register">
+    </div>
+  </form>
+</div>

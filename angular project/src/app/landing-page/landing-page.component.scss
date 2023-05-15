@@ -1,0 +1,179 @@
+// display: flex;
+// justify-content: center;
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.image {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+
+  // height: auto;
+  margin: 20px;
+  height: auto;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0px 0px;
+
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.03);
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+
+}
+
+.image img {
+  opacity: 0.8;
+  position: relative;
+  vertical-align: top;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.image .details {
+  // z-index: 1;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: #fff;
+
+}
+
+.image .details h2 {
+  text-align: justify;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 10px;
+
+
+}
+
+.image .details p {
+
+  margin: 30px 30px 0 30px;
+  font-size: 16px;
+  text-align: left;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity, transform;
+}
+
+.image .details a {
+  margin: 30px 30px 0 30px;
+  font-size: 16px;
+  text-align: left;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity,
+    transform;
+}
+
+.image:hover .details a {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.image:hover .details p {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.read-more {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+
+}
+
+@media(max-width:1080px) {
+  .image {
+    flex: 100%;
+    max-width: 400px;
+
+  }
+}
+
+@media(max-width:450px) {
+
+  .image .details p {
+    font-size: 14px;
+
+  }
+
+  .read-more {
+    font-size: 18px;
+  }
+
+}
+
+
+
+
+
+
+
+// //  Cards BMW
+
+// .card {
+//   background: greenyellow;
+//   width: 270px;
+//   margin: 10px;
+//   border-radius: 15px;
+
+
+//   &:hover {
+//     background-color: rgb(62, 62, 62);
+//     color: white;
+//     cursor: pointer;
+//     transform: scale(1.03);
+//     transition: all 1s ease;
+//   }
+
+//   a {
+//     background: black;
+//     color: white;
+//     padding: 15px 20px;
+//     display: block;
+//     text-align: center;
+//     margin: 20px 50px;
+//     text-decoration: none;
+//   }
+
+//   p {
+//     padding: 10px;
+//   }
+
+//   h2 {
+//     padding: 10px;
+//   }
+
+// }
+
+// .card-image {
+//   height: 170px;
+//   margin-bottom: 15px;
+//   background-size: cover;
+//   border-radius: 15px 15px 0px 0px;
+// }
+
+// .car-1 {
+//   background-image: url("../../assets/bmw-i8.jpg");
+// }
+
+// .car-2 {
+//   background-image: url("../../assets/bmw-m5.jpg");
+// }
+
+// .car-3 {
+//   background-image: url("../../assets/bmw-m3.jpg");
+// }

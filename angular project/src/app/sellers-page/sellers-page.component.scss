@@ -1,0 +1,156 @@
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #1b1a1a, #0f2a52);
+  border: 2px solid #0a7ae9;
+  margin-top: 5px;
+
+}
+
+// HEADING
+
+.container .heading {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+  color: #0a7ae9;
+  border-bottom: 2px solid;
+
+}
+
+.container .heading::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+// CARD DETAILS
+
+.container form .card-details {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+    color: #0a7ae9;
+  }
+
+  .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+}
+
+
+
+
+
+.card-details .card-box input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid {
+  border-color: #05073a;
+}
+
+form .circal-form .circal-title {
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  color: #0a7ae9;
+}
+
+
+form .circal-form .category {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #0a7ae9;
+
+}
+
+// BUTTON-REGISTER
+
+form .button {
+  text-align: center;
+}
+
+form .button input {
+  padding: 10px 0;
+  margin-top: 10px;
+  height: 100%;
+  width: 50%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #1b1a1a, #0f2a52);
+}
+
+form .button input:hover {
+  background: linear-gradient(90deg, #5602f1, #0a7ae9);
+  transition: all 1s ease;
+  transform: scale(1.02);
+}
+
+
+
+// MOBILE
+
+@media (max-width:584px) {
+  .container {
+    max-width: 100%;
+
+  }
+
+  form .card-details .card-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .circal-form .category {
+    width: 100%;
+  }
+
+  .container form .card-details {
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  .card-details::_webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.button {
+  width: 100%;
+}
+
+.error {
+  color: red;
+}

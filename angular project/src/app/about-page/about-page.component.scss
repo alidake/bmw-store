@@ -1,0 +1,44 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #373B44, #4286f4);
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+
+.image-section {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+
+
+  &:hover {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.7s ease;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+
+}

@@ -1,0 +1,18 @@
+<div *ngIf="user?.role==='seller'" class="add-car">
+  <button><a href="../sellers-page/">Add Car to your shop</a></button>
+</div>
+<div class="search">
+  <label for="search">Search for a car</label>
+  <input type="search" [(ngModel)]="searchTerm" (ngModelChange)="search($event)" name="" id="search">
+</div>
+<div class="gallery">
+  <div *ngFor="let content of tempCars" class="content">
+    <img [src]="content.image" alt="I8">
+    <h3>{{content.model}}</h3>
+    <p>{{content.info}}</p>
+    <h6>${{content.price|number:'1.0-2'}}</h6>
+
+    <button *ngIf="user?.role!=='seller'" class="buy-1">Buy</button>
+    <button (click)="deleteCar(content)" *ngIf="user?.role==='seller'" class="buy-1-red">Delete Car</button>
+  </div>
+</div>

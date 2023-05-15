@@ -1,0 +1,42 @@
+<!-- Navigation Bar -->
+
+<nav>
+  <div class="logo"  (click)="goTo('landing-page')">
+    <div class="contain">
+      <img class="img-m" src="../../assets/photos/BMW-M-LOGO.png" alt="">
+    </div>
+    <div>
+      <span class="nav-title1">B</span><span class="nav-title2">M</span><span class="nav-title3">W</span>
+    </div>
+
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a (click)="goTo('landing-page')">Home</a>
+    </li>
+
+    <li>
+      <a (click)="goTo('shopping-page')">Shop</a>
+    </li>
+
+    <li>
+      <a (click)="goTo('about-page')">About</a>
+    </li>
+    <li *ngIf="!authService.isLoggedIn">
+      <a (click)="goTo('login-page')">Login</a>
+    </li>
+    <li *ngIf="authService.isLoggedIn">
+      <a (click)="logout()">Logout</a>
+    </li>
+    <li *ngIf="authService.isLoggedIn">
+      <a (click)="goTo('change-password')">Change Password</a>
+    </li>
+
+
+  </ul>
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>

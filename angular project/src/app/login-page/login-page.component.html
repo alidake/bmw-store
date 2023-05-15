@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="heading">Login</div>
+  <form [formGroup]="loginForm">
+    <div class="card-details">
+
+      <div class="card-box">
+        <span class="details">Username*</span>
+        <input maxlength="16" minlength="4" formControlName="username" type="text" placeholder="Enter your Username">
+      </div>
+
+
+      <div class="card-box">
+        <span class="details">Password*</span>
+        <input formControlName="password" type="password" placeholder="Enter your password">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="button">
+      <input (click)="login()" type="button" value="Login">
+    </div>
+
+    <p class="register">dont have an account? <a routerLink="/register-page">Register</a></p>
+  </form>
+</div>

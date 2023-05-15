@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: bmw;
+  src: url(assets/fonts/BMWTypeNextLatin.woff2);
+}
+
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(90deg, #373B44, #4286f4);
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: bmw;
+
+}
+
+//  Body
+// body {
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   min-height: 100vh;
+//   background: rgb(27, 27, 27);
+// }

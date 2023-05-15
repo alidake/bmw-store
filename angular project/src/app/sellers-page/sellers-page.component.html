@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="heading">Add a Car</div>
+  <form [formGroup]="carForm">
+    <div class="card-details">
+      <div class="card-box">
+        <span class="details">Model</span>
+        <input formControlName="model" type="text">
+      </div>
+      <div class="card-box">
+        <span class="details">Price</span>
+        <input formControlName="price" type="number">
+      </div>
+      <div class="card-box">
+        <span class="details">Info</span>
+        <input formControlName="info" type="text">
+      </div>
+      <div class="card-box">
+        <span class="details">Image</span>
+        <input (change)="fileChange($event)" type="file">
+      </div>
+      <div class="error" *ngIf="showError">
+        <p>Please fill out all the fields</p>
+      </div>
+      <div class="button">
+        <input (click)="submit()" type="button" value="Submit">
+      </div>
+
+
+    </div>
+
+
+  </form>
+</div>
